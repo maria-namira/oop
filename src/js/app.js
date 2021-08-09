@@ -1,6 +1,6 @@
 export default function Character(name, type) {
   if (typeof name !== 'string' || name.length < 2 || name.length > 10) {
-    throw new Error('Имя должно быть сткрой от 2 до 10 символов включительно');
+    throw new Error('Имя должно быть строкой от 2 до 10 символов включительно');
   }
 
   const units = {
