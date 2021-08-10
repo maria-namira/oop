@@ -25,7 +25,7 @@ test('Метод levelUp должен повышать level на 1, attack и d
 test('Метод levelUP должен выбросить ошибку если health = 0', () => {
   const test = new Bowman('test');
   test.health = 0;
-  expect(() => test.levelUP()).toThrowError('Нельзя повысить левел умершего');
+  expect(() => test.levelUP()).toThrow('Нельзя повысить левел умершего');
 });
 
 test('if health = 0, output health = 0', () => {
