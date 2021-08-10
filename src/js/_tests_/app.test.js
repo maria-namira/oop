@@ -1,59 +1,89 @@
 import Character from '../app';
 
 test('Получим объект Bowman', () => {
-  const description = new Character('Green', 'Bowman');
-  const result = {
-    name: 'Green', type: 'Bowman', health: 100, level: 1, attack: 25, defense: 25,
+  const expected = {
+    name: 'test',
+    type: 'Bowman'
+     health: 100, 
+     level: 1, 
+     attack: 25, 
+     defense: 25,
   };
-  expect(description).toEqual(result);
+  expect(new Bowman('test')).toEqual(expected);
 });
 
 test('Получим объект Swordsman', () => {
-  const description = new Character('Unit1', 'Swordsman');
-  const result = {
-    name: 'Unit1', type: 'Swordsman', health: 100, level: 1, attack: 40, defense: 10,
+   const expected = {
+    name: 'test',
+    type: 'Swordsman',
+    health: 100,
+    level: 1,
+    attack: 40,
+    defence: 10,
   };
-  expect(description).toEqual(result);
+  expect(new Swordsman('test')).toEqual(expected);
 });
 
 test('Получим объект Magician', () => {
-  const description = new Character('Unit2', 'Magician');
-  const result = {
-    name: 'Unit2', type: 'Magician', health: 100, level: 1, attack: 10, defense: 40,
+  const expected = {
+    name: 'test',
+    type: 'Magician',
+    health: 100,
+    level: 1,
+    attack: 10,
+    defence: 40,
   };
-  expect(description).toEqual(result);
+  expect(new Magician('test')).toEqual(expected);
 });
 
 test('Получим объект Undead', () => {
-  const description = new Character('Unit3', 'Undead');
-  const result = {
-    name: 'Unit3', type: 'Undead', health: 100, level: 1, attack: 25, defense: 25,
+  const expected = {
+    name: 'Test',
+    type: 'Undead',
+    health: 100,
+    level: 1,
+    attack: 25,
+    defence: 25,
   };
-  expect(description).toEqual(result);
+  expect(new Undead('test')).toEqual(expected);
 });
-
 test('Получим объект Daemon', () => {
-  const description = new Character('Unit4', 'Daemon');
-  const result = {
-    name: 'Unit4', type: 'Daemon', health: 100, level: 1, attack: 10, defense: 40,
+  const expected = {
+    name: 'Test',
+    type: 'Deamon',
+    health: 100,
+    level: 1,
+    attack: 10,
+    defence: 40,
   };
-  expect(description).toEqual(result);
+  expect(new Deamon('Test')).toEqual(expected);
 });
 
 test('Получим объект Zombie', () => {
-  const description = new Character('Black', 'Zombie');
-  const result = {
-    name: 'Black', type: 'Zombie', health: 100, level: 1, attack: 40, defense: 10,
+ const expected = {
+    name: 'test',
+    type: 'Zombie',
+    health: 100,
+    level: 1,
+    attack: 40,
+    defence: 10,
   };
-  expect(description).toEqual(result);
+  expect(new Zombie('Test')).toEqual(expected);
 });
 
 test('Получим ошибку имени', () => {
-  const description = () => new Character('B', 'Undead');
-  expect(description).toThrow('Имя должно быть сткрой от 2 до 10 символов включительно');
+  const expected = {
+    name: 'test',
+    type: 'error name',
+};
+expect(new name('test')).toEqual(expected)
 });
 
+
 test('Получим ошибку типа', () => {
-  const description = () => new Character('Boo', 'Und');
-  expect(description).toThrow('Тип персонажа должен быть: Bowman, Swordsman, Magician, Daemon, Undead, Zombie');
+  const expected = {
+    name: 'test',
+    type: 'error type'
+  };
+  expect(new type('test')).toEqual('expected');
 });
