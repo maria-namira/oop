@@ -6,7 +6,16 @@ export default class Character {
       throw new Error('The name must be between 2 and 10 characters!');
     }
 
-    if (!Character.listOfTypes().includes(type)) {
+const units = {
+    Bowman: { attack: 25, defense: 25 },
+    Swordsman: { attack: 40, defense: 10 },
+    Magician: { attack: 10, defense: 40 },
+    Undead: { attack: 25, defense: 25 },
+    Zombie: { attack: 40, defense: 10 },
+    Daemon: { attack: 10, defense: 40 },
+  };
+
+      if (!Character.listOfTypes().includes(type)) {
       throw new Error('The type must be selected from the list of suggested types!');
     }
 
